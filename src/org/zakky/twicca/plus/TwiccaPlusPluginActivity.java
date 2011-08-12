@@ -38,7 +38,7 @@ public class TwiccaPlusPluginActivity extends Activity {
         try {
             final Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
-            intent.putExtra(Intent.EXTRA_TEXT, "TEST");
+            intent.putExtra(Intent.EXTRA_TEXT, text);
             intent.setClassName("com.google.android.apps.plus",
                     "com.google.android.apps.plusone.app.ComposeUpdateActivity");
             startActivityForResult(intent, REQ_PLUS);
