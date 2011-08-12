@@ -1,0 +1,253 @@
+_____________________________________________________________________
++ Program class: org/zakky/twicca/plus/TwiccaPlusPluginActivity
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class org.zakky.twicca.plus.TwiccaPlusPluginActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 88):
+  - Integer [2130903040]
+  - String [android.intent.action.SEND]
+  - String [android.intent.action.VIEW]
+  - String [android.intent.extra.TEXT]
+  - String [com.google.android.apps.plus]
+  - String [com.google.android.apps.plusone.app.ComposeUpdateActivity]
+  - String [market://search?q=com.google.android.apps.plus]
+  - String [text/plain]
+  - Class [android/app/Activity]
+  - Class [android/content/Intent]
+  - Class [android/net/Uri]
+  - Class [java/lang/Exception]
+  - Class [java/lang/String]
+  - Class [org/zakky/twicca/plus/TwiccaPlusPluginActivity]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onActivityResult (IILandroid/content/Intent;)V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/app/Activity.onStart ()V]
+  - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+  - Methodref [android/content/Intent.<init> (Ljava/lang/String;Landroid/net/Uri;)V]
+  - Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/content/Intent.setClassName (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
+  - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.finish ()V]
+  - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.getIntent ()Landroid/content/Intent;]
+  - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.setContentView (I)V]
+  - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.setResult (I)V]
+  - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.startActivityForResult (Landroid/content/Intent;I)V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Landroid/net/Uri;)V]
+  + NameAndType [finish ()V]
+  + NameAndType [getIntent ()Landroid/content/Intent;]
+  + NameAndType [getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [onActivityResult (IILandroid/content/Intent;)V]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onStart ()V]
+  + NameAndType [parse (Ljava/lang/String;)Landroid/net/Uri;]
+  + NameAndType [putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [setClassName (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setResult (I)V]
+  + NameAndType [setType (Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [startActivityForResult (Landroid/content/Intent;I)V]
+  + Utf8 [()Landroid/content/Intent;]
+  + Utf8 [()V]
+  + Utf8 [(I)V]
+  + Utf8 [(IILandroid/content/Intent;)V]
+  + Utf8 [(Landroid/content/Intent;I)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [(Ljava/lang/String;)Landroid/net/Uri;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Landroid/net/Uri;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [StackMapTable]
+  + Utf8 [android.intent.action.SEND]
+  + Utf8 [android.intent.action.VIEW]
+  + Utf8 [android.intent.extra.TEXT]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/net/Uri]
+  + Utf8 [com.google.android.apps.plus]
+  + Utf8 [com.google.android.apps.plusone.app.ComposeUpdateActivity]
+  + Utf8 [finish]
+  + Utf8 [getIntent]
+  + Utf8 [getStringExtra]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/String]
+  + Utf8 [market://search?q=com.google.android.apps.plus]
+  + Utf8 [onActivityResult]
+  + Utf8 [onCreate]
+  + Utf8 [onStart]
+  + Utf8 [org/zakky/twicca/plus/TwiccaPlusPluginActivity]
+  + Utf8 [parse]
+  + Utf8 [putExtra]
+  + Utf8 [setClassName]
+  + Utf8 [setContentView]
+  + Utf8 [setResult]
+  + Utf8 [setType]
+  + Utf8 [startActivityForResult]
+  + Utf8 [text/plain]
+
+Fields (count = 0):
+
+Methods (count = 4):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public TwiccaPlusPluginActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #15
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #17
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        - Integer [2130903040]
+      [8] invokevirtual #28
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.setContentView (I)V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onStart()V
+    Access flags: 0x4
+      = protected void onStart()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 110, locals = 3, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #18
+        - Methodref [android/app/Activity.onStart ()V]
+      [4] aload_0 v0
+      [5] invokevirtual #27
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.getIntent ()Landroid/content/Intent;]
+      [8] dup
+      [9] astore_1 v1
+      [10] ifnonnull +13 (target=23)
+      [13] aload_0 v0
+      [14] iconst_0
+      [15] invokevirtual #29
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.setResult (I)V]
+      [18] aload_0 v0
+      [19] invokevirtual #26
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.finish ()V]
+      [22] return
+      [23] aload_1 v1
+      [24] ldc #4
+        - String [android.intent.extra.TEXT]
+      [26] invokevirtual #21
+        - Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
+      [29] dup
+      [30] astore_1 v1
+      [31] ifnonnull +13 (target=44)
+      [34] aload_0 v0
+      [35] iconst_0
+      [36] invokevirtual #29
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.setResult (I)V]
+      [39] aload_0 v0
+      [40] invokevirtual #26
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.finish ()V]
+      [43] return
+      [44] new #10
+        - Class [android/content/Intent]
+      [47] dup
+      [48] ldc #2
+        - String [android.intent.action.SEND]
+      [50] invokespecial #19
+        - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+      [53] dup
+      [54] astore_2 v2
+      [55] ldc #8
+        - String [text/plain]
+      [57] invokevirtual #24
+        - Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
+      [60] pop
+      [61] aload_2 v2
+      [62] ldc #4
+        - String [android.intent.extra.TEXT]
+      [64] aload_1 v1
+      [65] invokevirtual #22
+        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [68] pop
+      [69] aload_2 v2
+      [70] ldc #5
+        - String [com.google.android.apps.plus]
+      [72] ldc #6
+        - String [com.google.android.apps.plusone.app.ComposeUpdateActivity]
+      [74] invokevirtual #23
+        - Methodref [android/content/Intent.setClassName (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [77] pop
+      [78] aload_0 v0
+      [79] aload_2 v2
+      [80] iconst_1
+      [81] invokevirtual #30
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.startActivityForResult (Landroid/content/Intent;I)V]
+      [84] return
+      [85] pop
+      [86] ldc #7
+        - String [market://search?q=com.google.android.apps.plus]
+      [88] invokestatic #25
+        - Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
+      [91] astore_1 v1
+      [92] new #10
+        - Class [android/content/Intent]
+      [95] dup
+      [96] ldc #3
+        - String [android.intent.action.VIEW]
+      [98] aload_1 v1
+      [99] invokespecial #20
+        - Methodref [android/content/Intent.<init> (Ljava/lang/String;Landroid/net/Uri;)V]
+      [102] astore_1 v1
+      [103] aload_0 v0
+      [104] aload_1 v1
+      [105] iconst_2
+      [106] invokevirtual #30
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.startActivityForResult (Landroid/content/Intent;I)V]
+      [109] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (44 -> 84: 85):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [23] Var: ...[a:android/content/Intent], Stack: (empty)
+        - [44] Var: ...[a:java/lang/String], Stack: (empty)
+        - [85] Var: ..., Stack: [a:java/lang/Exception]
+        - [109] Var: ..., Stack: (empty)
+  + Method:       onActivityResult(IILandroid/content/Intent;)V
+    Access flags: 0x4
+      = protected void onActivityResult(int,int,android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 4, stack = 4):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] iload_2 v2
+      [3] aload_3 v3
+      [4] invokespecial #16
+        - Methodref [android/app/Activity.onActivityResult (IILandroid/content/Intent;)V]
+      [7] aload_0 v0
+      [8] invokevirtual #26
+        - Methodref [org/zakky/twicca/plus/TwiccaPlusPluginActivity.finish ()V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+

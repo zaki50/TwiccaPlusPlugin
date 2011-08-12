@@ -1,0 +1,8 @@
+org.zakky.twicca.plus.R
+org.zakky.twicca.plus.R$attr
+org.zakky.twicca.plus.R$drawable
+org.zakky.twicca.plus.R$layout
+org.zakky.twicca.plus.R$string
+org.zakky.twicca.plus.TwiccaPlusPluginActivity:
+    private static final int REQ_PLUS
+    private static final int REQ_INSTALL
