@@ -22,7 +22,7 @@
 
 	<application android:icon="@drawable/icon" android:label="@string/app_name">
 		<activity android:name=".TwiccaPlusPluginActivity"
-			android:label="@string/app_name">
+			android:label="@string/send_to_gplus">
 			<intent-filter>
 				<action android:name="jp.r246.twicca.ACTION_EDIT_TWEET" />
 				<category android:name="android.intent.category.DEFAULT" />
