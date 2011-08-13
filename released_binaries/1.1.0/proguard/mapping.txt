@@ -1,0 +1,4 @@
+org.zakky.twicca.plus.TwiccaPlusPluginActivity -> org.zakky.twicca.plus.TwiccaPlusPluginActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
