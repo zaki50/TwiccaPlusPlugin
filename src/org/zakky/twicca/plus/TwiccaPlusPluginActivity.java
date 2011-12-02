@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Debug;
+import android.widget.Toast;
 
 public class TwiccaPlusPluginActivity extends Activity {
     private static final int REQ_PLUS = 1;
@@ -76,6 +77,7 @@ public class TwiccaPlusPluginActivity extends Activity {
         }
 
         // 見つからなかったのでマーケットへ飛ばす
+        Toast.makeText(this, R.string.gplus_app_not_found, Toast.LENGTH_LONG).show();
         Uri uri = Uri.parse("market://search?q=" + PACKAGE_NAME);
         Intent marketIntent = new Intent(Intent.ACTION_VIEW, uri);
         startActivityForResult(marketIntent, REQ_INSTALL);

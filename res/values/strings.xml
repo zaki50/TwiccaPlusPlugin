@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">TwiccaPlusPlugin</string>
     <string name="send_to_gplus">Send to Google+</string>
+    <string name="gplus_app_not_found">Google+ not installed.</string>
+
 </resources>

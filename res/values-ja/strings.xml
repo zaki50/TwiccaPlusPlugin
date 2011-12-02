@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="send_to_gplus">Google+で投稿</string>
+    <string name="gplus_app_not_found">Google+ がインストールされていません</string>
+
+</resources>
