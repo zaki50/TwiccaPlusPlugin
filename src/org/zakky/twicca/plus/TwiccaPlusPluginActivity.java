@@ -80,6 +80,7 @@ public class TwiccaPlusPluginActivity extends Activity {
         Toast.makeText(this, R.string.gplus_app_not_found, Toast.LENGTH_LONG).show();
         Uri uri = Uri.parse("market://search?q=" + PACKAGE_NAME);
         Intent marketIntent = new Intent(Intent.ACTION_VIEW, uri);
+        marketIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivityForResult(marketIntent, REQ_INSTALL);
     }
 
