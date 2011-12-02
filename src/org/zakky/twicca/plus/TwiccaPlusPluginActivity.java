@@ -21,7 +21,6 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Debug;
 import android.widget.Toast;
 
 public class TwiccaPlusPluginActivity extends Activity {
@@ -43,7 +42,6 @@ public class TwiccaPlusPluginActivity extends Activity {
 
     @Override
     protected void onStart() {
-        Debug.waitForDebugger();
         super.onStart();
 
         final Intent initiatorIntent = getIntent();
