@@ -32,8 +32,10 @@ public class TwiccaPlusPluginActivity extends Activity {
 
     private static final String OLD_ACTIVITY_CLASS_NAME = "com.google.android.apps.plusone.app.ComposeUpdateActivity";
 
+    private static final String OLD_ACTIVITY_CLASS_NAME2 = PACKAGE_NAME + ".phone.PostActivity";
+
     // Post するための Activity の名前。今のところタブレットでも phone らしい
-    private static final String ACTIVITY_CLASS_NAME_FOR_PHONE = PACKAGE_NAME + ".phone.PostActivity";
+    private static final String ACTIVITY_CLASS_NAME_FOR_PHONE = PACKAGE_NAME + ".phone.SignOnActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,10 @@ public class TwiccaPlusPluginActivity extends Activity {
         }
 
         // ダメだった場合は 以前のバージョンの Activity を試す。
+        intent.setClassName(PACKAGE_NAME, OLD_ACTIVITY_CLASS_NAME2);
+        if (startActivityForResult(this, intent, REQ_PLUS)) {
+            return;
+        }
         intent.setClassName(PACKAGE_NAME, OLD_ACTIVITY_CLASS_NAME);
         if (startActivityForResult(this, intent, REQ_PLUS)) {
             return;
@@ -96,6 +102,8 @@ public class TwiccaPlusPluginActivity extends Activity {
         try {
             activity.startActivityForResult(intent, requestCode);
             return true;
+        } catch (SecurityException e) {
+            return false;
         } catch (ActivityNotFoundException e) {
             return false;
         }
