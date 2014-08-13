@@ -30,12 +30,17 @@ public class TwiccaPlusPluginActivity extends Activity {
 
     private static final String PACKAGE_NAME = "com.google.android.apps.plus";
 
+    // 投稿に使う Activity の名前。古い順。 ACTION_SEND で text/plain を受け取るものを手がかりに探した
+
     private static final String OLD_ACTIVITY_CLASS_NAME = "com.google.android.apps.plusone.app.ComposeUpdateActivity";
 
     private static final String OLD_ACTIVITY_CLASS_NAME2 = PACKAGE_NAME + ".phone.PostActivity";
 
     // Post するための Activity の名前。今のところタブレットでも phone らしい
     private static final String ACTIVITY_CLASS_NAME_FOR_PHONE = PACKAGE_NAME + ".phone.SignOnActivity";
+
+    // Google+ 4.5.0.72928916 以降での投稿の入り口
+    private static final String ACTIVITY_CLASS_NAME_FOR_GATEWAY = "com.google.android.libraries.social.gateway.GatewayActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,7 +69,13 @@ public class TwiccaPlusPluginActivity extends Activity {
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, text);
 
-        // まずは、最新の G+ アプリの Activity を試す。
+        // まずは、新しい G+ アクティビティが持っている Activity から順にためしていく
+
+        intent.setClassName(PACKAGE_NAME, ACTIVITY_CLASS_NAME_FOR_GATEWAY);
+        if (startActivityForResult(this, intent, REQ_PLUS)) {
+            return;
+        }
+
         intent.setClassName(PACKAGE_NAME, ACTIVITY_CLASS_NAME_FOR_PHONE);
         if (startActivityForResult(this, intent, REQ_PLUS)) {
             return;
@@ -102,9 +113,7 @@ public class TwiccaPlusPluginActivity extends Activity {
         try {
             activity.startActivityForResult(intent, requestCode);
             return true;
-        } catch (SecurityException e) {
-            return false;
-        } catch (ActivityNotFoundException e) {
+        } catch (SecurityException | ActivityNotFoundException e) {
             return false;
         }
     }
