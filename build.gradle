@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:0.9.+"
+        classpath "com.android.tools.build:gradle:0.12.+"
     }
 }
 
@@ -31,7 +31,7 @@ subprojects {
 // http://www.gradle.org/docs/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html
 project.ext {
     compileSdkVersion = 19
-    buildToolsVersion = "19.0.3"
+    buildToolsVersion = "20.0.0"
 
     // see http://tools.android.com/tech-docs/new-build-system/tips#TOC-Improving-Build-Server-performance.
     // CIサーバなどでは -PdisablePreDex をつける。 preDexが省略されてビルドが速くなる
@@ -39,5 +39,5 @@ project.ext {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.11'
+    gradleVersion = '1.12'
 }
