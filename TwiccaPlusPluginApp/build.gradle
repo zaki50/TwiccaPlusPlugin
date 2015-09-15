@@ -1,16 +1,12 @@
 apply plugin: 'com.android.application'
 
-dependencies {
-
-}
-
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion 4
-        targetSdkVersion 19
+        targetSdkVersion 23
 
         versionCode 6
         versionName '1.5.0'
@@ -38,7 +34,8 @@ android {
 
     buildTypes {
         release {
-            runProguard true
+            minifyEnabled true
+            shrinkResources true
             proguardFile getDefaultProguardFile('proguard-android.txt')
             proguardFile file('proguard-project.txt')
 
@@ -47,31 +44,6 @@ android {
                 signingConfig signingConfigs.release
             }
         }
-    }
-
-    task ndkBuild(type:Exec) {
-        commandLine 'ndk-build', '-j'
-    }
-
-    task ndkClean(type:Exec) {
-        commandLine 'ndk-build', 'clean'
-    }
-
-    task libsClean(type:Exec) {
-        commandLine 'rm', '-rf', 'libs/armeabi', 'libs/armeabi-v7a', 'libs/x86', 'libs/mips'
-    }
-
-    if(new File(projectDir, "jni").exists()){
-        tasks.withType(Compile) {
-            compileTask -> compileTask.dependsOn ndkBuild
-        }
-
-        tasks.withType(com.android.build.gradle.tasks.PackageApplication) {
-            pkgTask -> pkgTask.jniDir new File(projectDir, 'libs')
-        }
-
-        clean.dependsOn 'ndkClean'
-        clean.dependsOn 'libsClean'
     }
 }
 
